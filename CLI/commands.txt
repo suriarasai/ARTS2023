@@ -3,10 +3,10 @@ zookeeper-server-start.bat C:\kafka\config\zookeeper.properties
 #Shell 2
 kafka-server-start.bat C:\kafka\config\server.properties 
 #Shell 3
-kafka-topics.bat --bootstrap-server localhost:9092 -–list
-kafka-topics.bat --bootstrap-server localhost:9092 --topic first_topic --create --partitions 3 --replication-factor 1 
-kafka-topics.bat --bootstrap-server localhost:9092 --topic first_topic –describe 
-kafka-topics.bat --bootstrap-server localhost:9092 --topic second_topic --create --partitions 1 --replication-factor 1 
+kafka-topics.bat -–list --bootstrap-server localhost:9092
+kafka-topics.bat --topic first_topic --create --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+kafka-topics.bat --topic first_topic –describe --bootstrap-server localhost:9092
+kafka-topics.bat --topic second_topic --create --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
 kafka-topics.bat --bootstrap-server localhost:9092 -–list 
 
 #Shell 4
