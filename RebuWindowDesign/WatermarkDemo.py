@@ -4,6 +4,9 @@ from pyspark.sql.types import StructType, StructField, StringType, IntegerType
 
 from lib.logger import Log4j
 
+import os
+os.environ['PYSPARK_SUBMIT_ARGS'] = '--packages org.apache.spark:spark-streaming-kafka-0-10_2.12:3.2.0,org.apache.spark:spark-sql-kafka-0-10_2.12:3.2.0 pyspark-shell'
+
 if __name__ == "__main__":
     spark = SparkSession \
         .builder \
